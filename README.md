@@ -5,7 +5,7 @@
 钉钉机器人支持5中消息类型，分别是：普通文本、Markdown富文本、Link、ActionCard、FeedCard
 
 #### Text
-![](/images/msgtype_text.png)
+![](./images/msgtype_text.png)
 
 
 #### Markdown
