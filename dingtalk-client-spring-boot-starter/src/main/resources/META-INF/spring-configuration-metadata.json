@@ -1,0 +1,49 @@
+{
+  "groups": [
+    {
+      "name": "dingtalk",
+      "type": "com.github.kancyframework.dingtalk.properties.DingTalkProperties",
+      "sourceType": "com.github.kancyframework.dingtalk.properties.DingTalkProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "dingtalk.access-token",
+      "type": "java.lang.String",
+      "description": "访问令牌 - 必要",
+      "sourceType": "com.github.kancyframework.dingtalk.properties.DingTalkProperties"
+    },
+    {
+      "name": "dingtalk.bean-name",
+      "type": "java.lang.String",
+      "description": "bean名称",
+      "sourceType": "com.github.kancyframework.dingtalk.properties.DingTalkProperties",
+      "defaultValue": "dingTalkClient"
+    },
+    {
+      "name": "dingtalk.clients",
+      "type": "java.util.Map<java.lang.String,com.github.kancyframework.dingtalk.properties.DingTalkProperties$DingTalkClientConfig>",
+      "sourceType": "com.github.kancyframework.dingtalk.properties.DingTalkProperties"
+    },
+    {
+      "name": "dingtalk.description",
+      "type": "java.lang.String",
+      "description": "描述 - 非必要",
+      "sourceType": "com.github.kancyframework.dingtalk.properties.DingTalkProperties"
+    },
+    {
+      "name": "dingtalk.rest-template-bean-name",
+      "type": "java.lang.String",
+      "description": "restTemplate bean名称",
+      "sourceType": "com.github.kancyframework.dingtalk.properties.DingTalkProperties",
+      "defaultValue": "restTemplate"
+    },
+    {
+      "name": "dingtalk.secret-key",
+      "type": "java.lang.String",
+      "description": "密钥",
+      "sourceType": "com.github.kancyframework.dingtalk.properties.DingTalkProperties"
+    }
+  ],
+  "hints": []
+}
