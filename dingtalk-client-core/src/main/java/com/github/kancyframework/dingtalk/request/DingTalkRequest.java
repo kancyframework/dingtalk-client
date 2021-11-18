@@ -1,9 +1,6 @@
 package com.github.kancyframework.dingtalk.request;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * 丁磊谈话请求
@@ -38,6 +35,12 @@ public abstract class DingTalkRequest {
         this.at.getAtMobiles().addAll(Arrays.asList(mobiles));
         this.at.setAtAll(false);
     }
+    public void atMobiles(Collection<String> mobiles){
+        if (Objects.nonNull(mobiles)){
+            this.at.getAtMobiles().addAll(mobiles);
+            this.at.setAtAll(false);
+        }
+    }
 
     public void atUserId(String userId){
         this.at.getAtUserIds().add(userId);
@@ -47,6 +50,12 @@ public abstract class DingTalkRequest {
     public void atUserIds(String... userIds){
         this.at.getAtUserIds().addAll(Arrays.asList(userIds));
         this.at.setAtAll(false);
+    }
+    public void atUserIds(Collection<String> userIds){
+        if (Objects.nonNull(userIds)){
+            this.at.getAtUserIds().addAll(userIds);
+            this.at.setAtAll(false);
+        }
     }
 
     static class At {
