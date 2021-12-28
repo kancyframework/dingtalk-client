@@ -9,7 +9,8 @@
 钉钉机器人支持5中消息类型，分别是：普通文本、Markdown富文本、Link、ActionCard、FeedCard
 
 #### Text
-![](../images/msgtype_text.png)
+![](https://images.cnblogs.com/cnblogs_com/kancy/2069805/o_211228103832_msgtype_text.png)
+
 
 请求发送Text消息报文：
 - `isAtAll=true`时`atMobiles`和`atUserIds`不生效
@@ -37,7 +38,7 @@
 ```
 
 #### Markdown
-![](../images/msgtype_markdown.png)
+![](https://images.cnblogs.com/cnblogs_com/kancy/2069805/o_211228103826_msgtype_markdown.png)
 
 请求发送Markdown消息报文：
 - markdown文本中`@18079637336`会自动转换成`@某某人`
@@ -58,7 +59,7 @@
 ```
 
 #### Link
-![](../images/msgtype_link.png)
+![](https://images.cnblogs.com/cnblogs_com/kancy/2069805/o_211228103819_msgtype_link.png)
 
 请求发送Link消息报文：
 
@@ -80,7 +81,7 @@
 ```
 
 #### ActionCard
-![](../images/msgtype_actionCard.png)
+![](https://images.cnblogs.com/cnblogs_com/kancy/2069805/o_211228103807_msgtype_actionCard.png)
 
 请求发送ActionCard消息报文：
 
@@ -112,7 +113,7 @@
 ```
 
 #### FeedCard
-![](../images/msgtype_feedCard.png)
+![](https://images.cnblogs.com/cnblogs_com/kancy/2069805/o_211228103813_msgtype_feedCard.png)
 
 请求发送FeedCard消息报文：
 

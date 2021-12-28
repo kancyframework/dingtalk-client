@@ -33,7 +33,7 @@ public class DingTalkClientTestRunner implements ApplicationRunner {
 ```
 
 ##### 1.3效果图
-![](../images/quick_start.png)
+![](https://images.cnblogs.com/cnblogs_com/kancy/2069805/o_211228103839_quick_start.png)
 
 
 #### 2.配置多个DingTalkClient
