@@ -1,9 +1,13 @@
-package com.github.kancyframework.dingtalk.demo;
+package com.github.kancyframework.dingtalk.demo.runner;
 
 import com.github.kancyframework.dingtalk.DingTalkClient;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+import java.util.Map;
 
 /**
  * DingTalkClientDemo
@@ -11,12 +15,19 @@ import org.springframework.boot.ApplicationRunner;
  * @author huangchengkang
  * @date 2021/11/17 20:36
  */
+@Slf4j
+@RequiredArgsConstructor
+@Component
 public class DingTalkClientTestRunner implements ApplicationRunner {
-    @Autowired
-    private DingTalkClient dingTalkClient;
+
+    private final DingTalkClient dingTalkClient;
+
+    private final Map<String, DingTalkClient> dingTalkClients;
 
     @Override
     public void run(ApplicationArguments args) {
+        log.info("dingTalk clients:{}", dingTalkClients);
+
         // 发生钉钉普通消息，并@所有人
         dingTalkClient.sendText("Hi DingTalkClient !", true);
     }
