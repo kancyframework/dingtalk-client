@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.github.kancyframework.dingtalk.demo</groupId>
 	<artifactId>demo-dingtalk-client-spring-boot-starter</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>demo-dingtalk-client-spring-boot-starter</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -20,7 +20,7 @@
 		<dependency>
 			<groupId>com.github.kancyframework</groupId>
 			<artifactId>dingtalk-client-spring-boot-starter</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
+			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
