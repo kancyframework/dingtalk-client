@@ -56,6 +56,9 @@ public class DingTalkClientDefinitionRegistrar implements ImportBeanDefinitionRe
                     BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(SpringDingTalkClientImpl.class);
                     beanDefinitionBuilder.addConstructorArgValue(accessToken);
                     beanDefinitionBuilder.addConstructorArgValue(secretKey);
+                    if (StringUtils.hasText(dingTalkProperties.getUrl())){
+                        beanDefinitionBuilder.addConstructorArgValue(dingTalkProperties.getUrl());
+                    }
                     beanDefinitionBuilder.addPropertyReference("restTemplate", config.getRestTemplateBeanName());
                     BeanDefinition beanDefinition = beanDefinitionBuilder.getRawBeanDefinition();
                     registry.registerBeanDefinition(config.getBeanName(), beanDefinition);
@@ -70,6 +73,9 @@ public class DingTalkClientDefinitionRegistrar implements ImportBeanDefinitionRe
             BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(SpringDingTalkClientImpl.class);
             beanDefinitionBuilder.addConstructorArgValue(accessToken);
             beanDefinitionBuilder.addConstructorArgValue(dingTalkProperties.getSecretKey());
+            if (StringUtils.hasText(dingTalkProperties.getUrl())){
+                beanDefinitionBuilder.addConstructorArgValue(dingTalkProperties.getUrl());
+            }
             beanDefinitionBuilder.addPropertyReference("restTemplate", dingTalkProperties.getRestTemplateBeanName());
             beanDefinitionBuilder.setPrimary(true);
             BeanDefinition beanDefinition = beanDefinitionBuilder.getRawBeanDefinition();

@@ -33,6 +33,10 @@ public class DingTalkProperties {
      */
     private String secretKey;
     /**
+     * url
+     */
+    private String url;
+    /**
      * 描述 - 非必要
      */
     private String description;

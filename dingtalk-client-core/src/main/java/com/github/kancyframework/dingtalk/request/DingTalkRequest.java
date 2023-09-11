@@ -58,7 +58,7 @@ public abstract class DingTalkRequest {
         }
     }
 
-    static class At {
+    public static class At {
         private boolean isAtAll;
         private List<String> atMobiles;
         private List<String> atUserIds;

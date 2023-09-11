@@ -27,6 +27,10 @@ public class SpringDingTalkClientImpl extends DingTalkClientImpl implements Spri
         super(accessToken, secretKey);
     }
 
+    public SpringDingTalkClientImpl(String accessToken, String secretKey, String url) {
+        super(accessToken, secretKey, url);
+    }
+
     /**
      * 请求
      *

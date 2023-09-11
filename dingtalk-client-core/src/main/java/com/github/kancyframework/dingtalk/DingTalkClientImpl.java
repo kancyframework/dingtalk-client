@@ -22,16 +22,25 @@ import java.util.Objects;
  * @date 2021/11/16 11:47
  */
 public class DingTalkClientImpl extends HttpClient implements DingTalkClient {
+    private static final String DEFAULT_URL = "https://oapi.dingtalk.com/robot/send";
     private String accessToken;
     private String secretKey;
+    private String url;
 
     public DingTalkClientImpl(String accessToken) {
         this.accessToken = accessToken;
+        this.url = DEFAULT_URL;
     }
 
     public DingTalkClientImpl(String accessToken, String secretKey) {
         this.accessToken = accessToken;
         this.secretKey = secretKey;
+        this.url = DEFAULT_URL;
+    }
+    public DingTalkClientImpl(String accessToken, String secretKey, String url) {
+        this.accessToken = accessToken;
+        this.secretKey = secretKey;
+        this.url = url;
     }
 
     /**
@@ -179,7 +188,7 @@ public class DingTalkClientImpl extends HttpClient implements DingTalkClient {
      */
     protected String getDingTalkServiceUrl(String accessToken, String secret) {
         try {
-            String url = String.format("https://oapi.dingtalk.com/robot/send?access_token=%s", accessToken);
+            String url = String.format("%s?access_token=%s", getUrl(), accessToken);
             if (Objects.nonNull(secret) && !secret.isEmpty()) {
                 Long timestamp = System.currentTimeMillis();
                 String stringToSign = timestamp + "\n" + secret;
@@ -211,5 +220,9 @@ public class DingTalkClientImpl extends HttpClient implements DingTalkClient {
      */
     protected final String getSecretKey() {
         return secretKey;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }
